@@ -1,0 +1,284 @@
+/* AI Lab Default Theme */
+.ai-lab-wrapper {
+  --lab-primary: #3b82f6;
+  --lab-secondary: #10b981;
+  --lab-bg: #f8fafc;
+  --lab-card-bg: #ffffff;
+  --lab-text: #1e293b;
+  --lab-text-muted: #64748b;
+  --lab-border: #e2e8f0;
+  
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--lab-bg);
+  color: var(--lab-text);
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.dark .ai-lab-wrapper {
+  --lab-bg: #0f172a;
+  --lab-card-bg: #1e293b;
+  --lab-text: #f1f5f9;
+  --lab-text-muted: #94a3b8;
+  --lab-border: #334155;
+}
+
+.lab-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background: var(--lab-border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--lab-primary);
+  transition: width 0.5s ease;
+}
+
+/* Step Content */
+.step-content {
+  background: var(--lab-card-bg);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--lab-border);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.step-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--lab-primary);
+}
+
+.step-description {
+  font-size: 1.1rem;
+  color: var(--lab-text-muted);
+  max-width: 600px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Step 1: Human Brain */
+.brain-image-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16/9;
+  background: #eee;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.concept-tags {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.concept-tag {
+  background: #eff6ff;
+  color: var(--lab-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: 1px solid var(--lab-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Step 2: Pixel Vision */
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.vision-card {
+  background: var(--lab-bg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--lab-border);
+}
+
+.pixel-canvas {
+  width: 100%;
+  aspect-ratio: 1;
+  image-rendering: pixelated;
+  background: #000;
+}
+
+/* Step 3: Features Game */
+.features-game {
+  width: 100%;
+  max-width: 800px;
+}
+
+.images-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.game-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 2px solid var(--lab-border);
+}
+
+.features-options {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--lab-border);
+  background: var(--lab-card-bg);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.feature-btn.selected {
+  border-color: var(--lab-primary);
+  background: #eff6ff;
+  color: var(--lab-primary);
+}
+
+/* Step 4: Camera (Existing styles adapted) */
+.camera-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  width: 100%;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .camera-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.webcam-wrapper {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 4/3;
+}
+
+.webcam-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background: var(--lab-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--lab-text-muted);
+  border: 1px solid var(--lab-border);
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Feedback Section */
+.feedback-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 0.5rem;
+  color: #166534;
+  width: 100%;
+}
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 10;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
