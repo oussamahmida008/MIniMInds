@@ -18,41 +18,41 @@ export default function Level2Page() {
     }
 
     return (
-        <div className="min-h-screen bg-linear-to-br from-indigo-100 to-purple-100">
-            <header className="bg-indigo-500 py-6 shadow-lg">
-                <div className="container mx-auto px-4">
-                    <Link href="/" className="inline-flex items-center gap-2 text-white hover:text-indigo-100 transition mb-4">
+        <div className="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-100">
+            <header className="bg-indigo-500 py-10 shadow-xl">
+                <div className="container mx-auto px-6">
+                    <Link href="/" className="inline-flex items-center gap-2 text-white hover:text-indigo-100 transition mb-6">
                         <ArrowLeft className="w-6 h-6" />
-                        <span className="font-bold">Retour à l'accueil</span>
+                        <span className="font-bold text-lg">Retour à l'accueil</span>
                     </Link>
-                    <h1 className="text-4xl font-bold text-white text-center">Niveau 2 : Analyse d'Images et Formes 🎯</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-white text-center">Niveau 2 : Analyse d'Images et Formes 🎯</h1>
                 </div>
             </header>
 
-            <main className="container mx-auto px-4 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <main className="container mx-auto px-6 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
                     {/* Idea 1 Card */}
                     <button
                         onClick={() => setCurrentIdea(1)}
-                        className="bg-white rounded-3xl p-8 shadow-xl border-4 border-purple-400 hover:scale-105 transition transform text-left group"
+                        className="bg-white rounded-3xl p-10 shadow-2xl border-4 border-purple-400 hover:scale-105 transition-all duration-300 transform text-left group"
                     >
-                        <div className="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mb-6 group-hover:bg-purple-200 transition">
-                            <Box className="w-10 h-10 text-purple-600" />
+                        <div className="bg-purple-100 w-24 h-24 rounded-full flex items-center justify-center mb-8 group-hover:bg-purple-200 transition">
+                            <Box className="w-12 h-12 text-purple-600" />
                         </div>
-                        <h2 className="text-2xl font-bold text-gray-800 mb-2">Jeu des Boîtes</h2>
-                        <p className="text-gray-600">Aide l'IA à créer les bonnes boîtes autour des objets pour les reconnaître parfaitement.</p>
+                        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Jeu des Boîtes</h2>
+                        <p className="text-lg text-gray-600 leading-relaxed">Aide l'IA à créer les bonnes boîtes autour des objets pour les reconnaître parfaitement.</p>
                     </button>
 
                     {/* Idea 2 Card */}
                     <button
                         onClick={() => setCurrentIdea(2)}
-                        className="bg-white rounded-3xl p-8 shadow-xl border-4 border-cyan-400 hover:scale-105 transition transform text-left group"
+                        className="bg-white rounded-3xl p-10 shadow-2xl border-4 border-cyan-400 hover:scale-105 transition-all duration-300 transform text-left group"
                     >
-                        <div className="bg-cyan-100 w-20 h-20 rounded-full flex items-center justify-center mb-6 group-hover:bg-cyan-200 transition">
-                            <Pen className="w-10 h-10 text-cyan-600" />
+                        <div className="bg-cyan-100 w-24 h-24 rounded-full flex items-center justify-center mb-8 group-hover:bg-cyan-200 transition">
+                            <Pen className="w-12 h-12 text-cyan-600" />
                         </div>
-                        <h2 className="text-2xl font-bold text-gray-800 mb-2">Reconnaître les Formes</h2>
-                        <p className="text-gray-600">Dessine une forme géométrique et découvre comment l'IA l'analyse pixel par pixel !</p>
+                        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Reconnaître les Formes</h2>
+                        <p className="text-lg text-gray-600 leading-relaxed">Dessine une forme géométrique et découvre comment l'IA l'analyse pixel par pixel !</p>
                     </button>
                 </div>
             </main>
